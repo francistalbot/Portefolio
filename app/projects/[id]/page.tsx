@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import projects from "@/data/projects.json";
+import { projects } from "@/config/projects";
 
 export default async function ProjectDetail({
   params,
