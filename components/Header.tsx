@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Icons } from "./ui/icons";
 import Link from "next/link";
 import { ModeSwitcher } from "./ModeSwitcher";
+import { MobileNavigation } from "./MobileNavigation";
 
 export function Header() {
   return (
@@ -14,7 +15,7 @@ export function Header() {
           <span className="sr-only">Francis Talbot</span>
         </Link>
 
-        <DesktopNavigation />
+        <DesktopNavigation className="ml-auto hidden md:flex"/>
         <nav className="ml-auto hidden items-center gap-1 md:flex">
           <Link href={siteConfig.links.github}>
             <Button rel="noreferrer" size="icon" variant="link">
@@ -24,6 +25,7 @@ export function Header() {
           </Link>
           <ModeSwitcher />
         </nav>
+        <MobileNavigation className="ml-auto md:hidden" />
       </div>
     </header>
   );
