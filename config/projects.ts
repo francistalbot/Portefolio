@@ -1,6 +1,54 @@
-export const projects = [
+export type Project = {
+  id: string;
+  title: string;
+  description: string;
+  longDescription: string;
+  tags: string[];
+  features: string[];
+  image?: string[];
+  technologies: string[];
+  cours?: string;
+  githubUrl?: string;
+  liveUrl?: string;
+};
+export const projects: Project[] = [
   {
-    id: "1",
+  id: "1",
+  title: "Provisions - Assistant Alimentaire Intelligent",
+  description:
+    "Application mobile multiplateforme de gestion alimentaire avec IA pour réduire le gaspillage et optimiser les achats.",
+  longDescription:
+    "Application complète de gestion alimentaire développée en méthodologie Agile sur 3 sprints. Solution tout-en-un permettant la gestion intelligente du garde-manger avec reconnaissance d'aliments par IA et photo, planification hebdomadaire des repas, création de listes d'épicerie dynamiques, recherche et consultation de recettes, et générateur de recettes basé sur les ingrédients disponibles. Intégration fluide entre tous les modules permettant d'ajouter directement les ingrédients d'une recette à la liste d'épicerie. Architecture full-stack avec authentification sécurisée, base de données non-relationnelle, et application mobile compatible Android et iOS. Vise à réduire concrètement le gaspillage alimentaire.",
+  tags: ["React Native", "IA", "Mobile", "Full-Stack", "SQL"],
+  features: [
+    "Authentification sécurisée (inscription, connexion)",
+    "Ajout d'aliments par photo avec reconnaissance IA",
+    "Gestion complète du garde-manger ",
+    "Liste d'épicerie intelligente (ajout, cochage)",
+    "Base de données de recettes avec recherche avancée",
+    "Planificateur de repas hebdomadaire avec calendrier",
+    "Générateur de recettes basé sur ingrédients disponibles",
+    "Intégration recette → liste d'épicerie en un clic",
+    "Application mobile Android et iOS",
+    "Landing page de présentation responsive",
+    "Synchronisation multi-appareils",
+  ],
+  image: ["/provisions-home.webp", "/provisions-recipes.webp", "/provisions-shopping-list.webp","/provisions-meal-planner.webp","/provisions-recipe-detail.webp"],
+  technologies: [
+    "React Native",
+    "Expo",
+    "Node.js",
+    "Express",
+    "Firebase Firestore",
+    "API REST",
+    "Vision AI",
+    "Firebase Auth",
+  ],
+  cours: "420-712-AH",
+  liveUrl: "https://provisions-app.vercel.app/",
+},
+  {
+    id: "2",
     title: "Boutique Animo - Système de Design Complet",
     description:
       "Conception complète d'une boutique en ligne responsive avec prototype interactif desktop et mobile.",
@@ -16,7 +64,7 @@ export const projects = [
       "Composants UI réutilisables",
       "Page d'accueil et page produit",
     ],
-    image: "/placeholder-project.jpg",
+    image: ["/animo-home.webp", ],
     technologies: [
       "Figma",
       "Auto Layout",
@@ -29,7 +77,7 @@ export const projects = [
     liveUrl: "#",
   },
   {
-    id: "2",
+    id: "3",
     title: "Forum Read It - Microservices Node.js",
     description:
       "Architecture microservices avec Node.js, authentification JWT et gestion de données.",
@@ -48,14 +96,13 @@ export const projects = [
       "Architecture microservices",
       "API RESTful",
     ],
-    image: "/placeholder-project.jpg",
+    image: ["/placeholder-project.jpg"],
     technologies: ["Node.js", "Express", "MongoDB", "MySQL", "Postman", "JWT"],
     cours: "420-708-AH",
     githubUrl: "#",
-    liveUrl: "#",
   },
   {
-    id: "3",
+    id: "4",
     title: "Libraire - Plateforme E-commerce Laravel",
     description:
       "Plateforme e-commerce complète de gestion de bibliothèque avec paiements intégrés et panneau admin.",
@@ -72,7 +119,6 @@ export const projects = [
       "Interface responsive et moderne",
       "Interface admin",
     ],
-    image: "/placeholder-project.jpg",
     technologies: [
       "Laravel",
       "PHP",
@@ -83,11 +129,10 @@ export const projects = [
       "Bootstrap",
     ],
     cours: "420-709-AH",
-    githubUrl: "#",
-    liveUrl: "#",
+    githubUrl: "https://github.com/francistalbot/402.709-projet1-Bibliotheque",
   },
   {
-    id: "4",
+    id: "5",
     title: "RouteTracker - Application de Gestion de Trajets GPS",
     description:
       "Application mobile multiplateforme de tracking GPS avec synchronisation cloud et mode hors ligne.",
@@ -109,7 +154,7 @@ export const projects = [
       "Intégration APIs REST",
       "Mode clair/sombre",
     ],
-    image: "/placeholder-project.jpg",
+    image: ["/placeholder-project.jpg"],
     technologies: [
       "React Native",
       "Expo",
@@ -123,10 +168,9 @@ export const projects = [
     ],
     cours: "420-713-AH",
     githubUrl: "#",
-    liveUrl: "#",
   },
   {
-    id: "5",
+    id: "6",
     title: "Application Docker Vulnérable XSS",
     description:
       "Démonstration de vulnérabilité Reflected XSS et implémentation des correctifs de sécurité.",
@@ -142,7 +186,7 @@ export const projects = [
       "Score CVSS de la vulnérabilité",
       "Rapport d'analyse de sécurité complet",
     ],
-    image: "/placeholder-project.jpg",
+    image: ["/placeholder-project.jpg"],
     technologies: [
       "Docker",
       "Docker Compose",
@@ -152,11 +196,9 @@ export const projects = [
       "CSP",
     ],
     cours: "420-711-AH",
-    githubUrl: "#",
-    liveUrl: "#",
   },
   {
-    id: "8",
+    id: "7",
     title: "Suite de Tests Complète et Pipeline CI/CD",
     description:
       "Tests automatisés multi-niveaux (unitaires, composants, E2E) avec analyse de code et optimisation de performance.",
@@ -188,7 +230,5 @@ export const projects = [
       "Performance Optimization",
     ],
     cours: "420-715-AH",
-    githubUrl: "#",
-    liveUrl: "#",
   },
 ];
