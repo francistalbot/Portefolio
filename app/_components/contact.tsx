@@ -1,6 +1,8 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -32,8 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-50 to-white dark:from-zinc-900 dark:to-black">
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="contact" className="min-h-screen bg-gradient-to-b from-zinc-50 to-white dark:from-zinc-900 dark:to-black">
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Me Contacter
@@ -199,7 +200,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </main>
-    </div>
+    </section>
   );
 }

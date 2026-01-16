@@ -1,5 +1,6 @@
 export type Project = {
   id: string;
+  featured?: boolean;
   title: string;
   description: string;
   longDescription: string;
@@ -14,6 +15,7 @@ export type Project = {
 export const projects: Project[] = [
   {
   id: "1",
+  featured: true,
   title: "Provisions - Assistant Alimentaire Intelligent",
   description:
     "Application mobile multiplateforme de gestion alimentaire avec IA pour réduire le gaspillage et optimiser les achats.",
@@ -39,16 +41,19 @@ export const projects: Project[] = [
     "Expo",
     "Node.js",
     "Express",
+    "Firebase",
     "Firebase Firestore",
-    "API REST",
-    "Vision AI",
     "Firebase Auth",
+    "API REST",
+    "Zod",
+    "TypeScript",
   ],
   cours: "420-712-AH",
   liveUrl: "https://provisions-app.vercel.app/",
 },
   {
     id: "2",
+    featured: true,
     title: "Boutique Animo - Système de Design Complet",
     description:
       "Conception complète d'une boutique en ligne responsive avec prototype interactif desktop et mobile.",
@@ -67,7 +72,6 @@ export const projects: Project[] = [
     image: ["/animo-home.webp", ],
     technologies: [
       "Figma",
-      "Auto Layout",
       "Prototyping",
       "UI Components",
       "Responsive Design",
@@ -78,6 +82,7 @@ export const projects: Project[] = [
   },
   {
     id: "3",
+    featured: true,
     title: "Forum Read It - Microservices Node.js",
     description:
       "Architecture microservices avec Node.js, authentification JWT et gestion de données.",
@@ -97,12 +102,14 @@ export const projects: Project[] = [
       "API RESTful",
     ],
     image: ["/placeholder-project.jpg"],
-    technologies: ["Node.js", "Express", "MongoDB", "MySQL", "Postman", "JWT"],
+    technologies: ["Node.js", "Express", "MongoDB", "Postman", "JWT",
+      "TypeScript"],
     cours: "420-708-AH",
     githubUrl: "#",
   },
   {
     id: "4",
+    featured: true,
     title: "Libraire - Plateforme E-commerce Laravel",
     description:
       "Plateforme e-commerce complète de gestion de bibliothèque avec paiements intégrés et panneau admin.",
@@ -133,6 +140,7 @@ export const projects: Project[] = [
   },
   {
     id: "5",
+    featured: true,
     title: "RouteTracker - Application de Gestion de Trajets GPS",
     description:
       "Application mobile multiplateforme de tracking GPS avec synchronisation cloud et mode hors ligne.",
@@ -160,17 +168,20 @@ export const projects: Project[] = [
       "Expo",
       "Expo Router",
       "Zustand",
+      "Firebase",
       "Firebase Auth",
       "Cloud Firestore",
       "SQLite",
       "Expo Location",
       "MapView",
+      "TypeScript",
     ],
     cours: "420-713-AH",
     githubUrl: "#",
   },
   {
     id: "6",
+    featured: true,
     title: "Application Docker Vulnérable XSS",
     description:
       "Démonstration de vulnérabilité Reflected XSS et implémentation des correctifs de sécurité.",
@@ -199,6 +210,7 @@ export const projects: Project[] = [
   },
   {
     id: "7",
+    featured: true,
     title: "Suite de Tests Complète et Pipeline CI/CD",
     description:
       "Tests automatisés multi-niveaux (unitaires, composants, E2E) avec analyse de code et optimisation de performance.",
@@ -222,6 +234,7 @@ export const projects: Project[] = [
     technologies: [
       "Vitest",
       "Cypress",
+      "Zod",
       "Cypress Component Testing",
       "GitHub Actions",
       "Sokrates.dev",
